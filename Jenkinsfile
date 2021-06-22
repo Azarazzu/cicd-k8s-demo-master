@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "kamal0405/cicd-k8s-demo"
+    registry = "azzu9394/cicd-k8s-demo"
     registryCredential = 'docker_credentials'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        git 'https://github.com/pkamalakannanp/cicd-k8s-demo-master.git'
+        git 'https://github.com/Azarazzu/cicd-k8s-demo-master.git'
         script{
                 def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
                 bat "${mvnHome}/bin/mvn clean install"
